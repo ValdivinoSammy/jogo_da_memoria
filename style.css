@@ -146,4 +146,28 @@ body {
         font-size: 1.8em;
     }
     
+   
+
+.card{
+   width: 70px;
+   height: 70px;
+}
+
+.winDiv h1{
+    text-align: center;
+}
+
+}
+
+@media screen and (max-width: 360px){
+ #container {
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-columns: auto auto auto ;
+}
+
+.card{
+   width: 90px;
+   height:90px;
+}
+
 }
