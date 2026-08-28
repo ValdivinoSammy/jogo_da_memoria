@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #999999;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+#container {
+    max-width: 680px;
+
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto;
+    gap: 15px;
+
+    perspective: 1000px;
+}
+
+
+@keyframes flip {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(180deg);
+    }
+
+}
+
+@keyframes flipDown {
+    0% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+
+
+.card {
+    width: 100px;
+    height: 100px;
+
+    background-color: rgba(57, 125, 250, 0.863);
+    box-shadow: 5px 5px 5px 1px #555;
+    border-radius: 10px;
+
+    transition-property: background-color;
+    transition-duration: 700ms;
+
+    position: relative;
+
+    transform-style: preserve-3d;
+    transition: transform 700ms;
+
+
+}
+
+.card:hover {
+    background-color: rgba(12, 96, 253, 0.863);
+}
+
+.front,
+.verse {
+    position: absolute;
+
+    backface-visibility: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.front {
+    transform: rotateY(180deg);
+    background-color: #333;
+    border-radius: 10px;
+}
+
+
+.imageCards {
+    height: 100%;
+}
+
+/* tela de vitoria style */
+
+.winDiv {
+    width: 100%;
+    height: 100%;
+
+    background-color: #111111d8;
+
+    position: absolute;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.winDiv h1 {
+    font-size: 2.4em;
+    
+
+    align-self: flex-end;
+    justify-self: center;
+}
+
+#reset {
+    background-color: rgba(11, 60, 150, 0.863);
+    border-radius: 8px;
+    border: 1px solid rgba(175, 189, 214, 0.863) ;
+
+    padding: 10px;
+
+    font-weight: 600;
+    font-size: 1.4em;
+
+    align-self: flex-start;
+    justify-self: center;
+}
+
+#reset:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    .winDiv h1 {
+        font-size: 1.8em;
+    }
+    
+}
