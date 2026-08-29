@@ -1,9 +1,11 @@
-let embaralhado = [];
 let i = 0;
-let imageN;
 let cardsFliped = 0;
+let imageN;
+let embaralhado = [];
 let flipeds = [];
 let position = [];
+let lockedMode = false;
+let moves = 0;
 
 
 let imagens = {
@@ -43,20 +45,31 @@ function embaralhar() {
 // Comparar cartas viradas
 
 function comparar(pos1, pos2) {
+    lockedMode = true;
     if (flipeds[0] === flipeds[1] && flipeds[0] !== "" && flipeds[1]!== "" ) {
         embaralhado[pos1] = "";
         embaralhado[pos2] = "";
         piece[pos1].removeEventListener("click", flip);
         piece[pos2].removeEventListener("click", flip);
+        voltandoAcao();
         itEnded();
     } else {
         setTimeout(() => {
             piece[pos1].style.animation = "flipDown 600ms forwards";
             piece[pos2].style.animation = "flipDown 600ms forwards";
+            voltandoAcao();
         }, 600)
 
     }
 
+}
+
+// removendo lockedMode e limpando as posições e cartas flipadas
+
+function voltandoAcao(){
+    flipeds.length = 0;
+    position.length = 0;
+    lockedMode = false;
 }
 
 // o jogo acabou? 
@@ -68,6 +81,7 @@ function itEnded(){
 
 // recomeçar
 function restart(){
+    moves = 0;
     i = 0;
     embaralhado.length = 0;
     winRemove();
@@ -76,4 +90,5 @@ function restart(){
     again();
 
 };
+
 

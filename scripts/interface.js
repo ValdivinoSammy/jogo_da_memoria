@@ -19,6 +19,7 @@ again();
 // flipar a carta
 
 function flip(event) {
+    if(!lockedMode){
     let valor = event.currentTarget.dataset.marcador;
     if (valor === position[0]) { return }
     else {
@@ -32,24 +33,27 @@ function flip(event) {
         }
         if (cardsFliped === 2) {
             cardsFliped = 0;
+            moves++;
             comparar(position[0], position[1]);
-            flipeds.length = 0;
-            position.length = 0;
         } else { return };
+    }
     }
 };
 
 // tela de vitoria 
 
 function win() {
+    if(!localStorage.getItem("record") || localStorage.getItem("record") > moves ){
+    localStorage.setItem("record", moves);};
+    let record = localStorage.getItem("record");
     setTimeout(() => {
-        winScream.setAttribute("class", "winDiv");
-        winScream.innerHTML = '<h1>Parabéns, você venceu o Jogo.</h1><div id="reset" onclick="restart()">Restart</div>';
+        winScream.classList.add("winDiv");
+        winScream.innerHTML = `<h1>Parabéns, você venceu o Jogo.</h1><p>Recorde de movimentos: ${record}</p><p>Movimentos realizados: ${moves} </p><div id="reset" onclick="restart()">Restart</div>`;
     }, 600);
 };
 
 function winRemove(){
-    winScream.removeAttribute("class", "winDiv");
+    winScream.classList.remove("winDiv");
     winScream.innerHTML = '';
 };
 
