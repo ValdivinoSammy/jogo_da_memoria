@@ -9,95 +9,14 @@
 </head>
 
 <body>
-
-    <div id="container">
-
-        <div class="card" data-marcador="0">
-            <div class="verse"><img alt="verso da carta" class="imageCards" src="./imagens/verso.png"></div>
-            <div class="front"></div>
-        </div>
-        <div class="card" data-marcador="1">
-            <div class="verse"><img alt="verso da carta" class="imageCards" src="./imagens/verso.png"></div>
-            <div class="front"></div>
-        </div>
-        <div class="card" data-marcador="2">
-            <div class="verse"><img alt="verso da carta" class="imageCards" src="./imagens/verso.png"></div>
-            <div class="front"></div>
-        </div>
-        <div class="card" data-marcador="3">
-            <div class="verse"><img alt="verso da carta" class="imageCards" src="./imagens/verso.png"></div>
-            <div class="front"></div>
-        </div>
-
-        <div class="card" data-marcador="4">
-            <div class="verse"><img alt="verso da carta" class="imageCards" src="./imagens/verso.png"></div>
-            <div class="front"></div>
-        </div>
-        <div class="card" data-marcador="5">
-            <div class="verse"><img alt="verso da carta" class="imageCards" src="./imagens/verso.png"></div>
-            <div class="front"></div>
-        </div>
-        <div class="card" data-marcador="6">
-            <div class="verse"><img alt="verso da carta" class="imageCards" src="./imagens/verso.png"></div>
-            <div class="front"></div>
-        </div>
-        <div class="card" data-marcador="7">
-            <div class="verse"><img alt="verso da carta" class="imageCards" src="./imagens/verso.png"></div>
-            <div class="front"></div>
-        </div>
-
-        <div class="card" data-marcador="8">
-            <div class="verse"><img alt="verso da carta" class="imageCards" src="./imagens/verso.png"></div>
-            <div class="front"></div>
-        </div>
-        <div class="card" data-marcador="9">
-            <div class="verse"><img alt="verso da carta" class="imageCards" src="./imagens/verso.png"></div>
-            <div class="front"></div>
-        </div>
-        <div class="card" data-marcador="10">
-            <div class="verse"><img alt="verso da carta" class="imageCards" src="./imagens/verso.png"></div>
-            <div class="front"></div>
-        </div>
-        <div class="card" data-marcador="11">
-            <div class="verse"><img alt="verso da carta" class="imageCards" src="./imagens/verso.png"></div>
-            <div class="front"></div>
-        </div>
-
-        <div class="card" data-marcador="12">
-            <div class="verse"><img alt="verso da carta" class="imageCards" src="./imagens/verso.png"></div>
-            <div class="front"></div>
-        </div>
-        <div class="card" data-marcador="13">
-            <div class="verse"><img alt="verso da carta" class="imageCards" src="./imagens/verso.png"></div>
-            <div class="front"></div>
-        </div>
-        <div class="card" data-marcador="14">
-            <div class="verse"><img alt="verso da carta" class="imageCards" src="./imagens/verso.png"></div>
-            <div class="front"></div>
-        </div>
-        <div class="card" data-marcador="15">
-            <div class="verse"><img alt="verso da carta" class="imageCards" src="./imagens/verso.png"></div>
-            <div class="front"></div>
-        </div>
-
-        <div class="card" data-marcador="16">
-            <div class="verse"><img alt="verso da carta" class="imageCards" src="./imagens/verso.png"></div>
-            <div class="front"></div>
-        </div>
-        <div class="card" data-marcador="17">
-            <div class="verse"><img alt="verso da carta" class="imageCards" src="./imagens/verso.png"></div>
-            <div class="front"></div>
-        </div>
-        <div class="card" data-marcador="18">
-            <div class="verse"><img alt="verso da carta" class="imageCards" src="./imagens/verso.png"></div>
-            <div class="front"></div>
-        </div>
-        <div class="card" data-marcador="19">
-            <div class="verse"><img alt="verso da carta" class="imageCards" src="./imagens/verso.png"></div>
-            <div class="front"></div>
-        </div>
-
+    <div id="start">
+        <h1>ESCOLHA O TAMANHO DO SEU TABULEIRO</h1>
+        <button onclick="grid20()">20 Cartas</button>
+        <button onclick="grid30()">30 Cartas</button>
     </div>
+    
+    <div id="container"></div>
+    
     <div id="winScream"></div>
     <script src="./scripts/jogo.js"></script>
     <script src="./scripts/interface.js"></script>
