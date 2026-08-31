@@ -100,12 +100,14 @@ function colocando() {
 function newGrid(){
     let piece = document.querySelectorAll(".card");
     if(tamanhoDaGrid === 30){
+        container.classList.remove("gridTemplate20cards");
         container.classList.add("gridTemplate30cards");
         piece.forEach(elemeto=>{
          elemeto.classList.add("cardMenor");
         })
 
     }else{
+        container.classList.remove("gridTemplate30cards");
         container.classList.add("gridTemplate20cards");
         piece.forEach(elemeto=>{
          elemeto.classList.add("cardMaior");
