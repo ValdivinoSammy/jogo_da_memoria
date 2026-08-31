@@ -40,8 +40,8 @@ let imagens = {
 };
 
 let records = { 
-    recordGrid20:"record",
-    recordGrid30:"recordOutro"};
+    recordGrid20:"recordgrid20",
+    recordGrid30:"recordgrid30"};
 
 function whatIsGrid(){
    return tamanhoDaGrid === 20 ? imagens.cards20 : imagens.cards30;

@@ -48,7 +48,7 @@ function flip(event) {
 
 function win() {
     let record;
-    if(tamanhoDaGrid === 20){let record = records.recordGrid20;}else{record = records.recordGrid30};
+    if(tamanhoDaGrid === 20){record = records.recordGrid20;}else{record = records.recordGrid30};
 
     if (!localStorage.getItem(record) || localStorage.getItem(record) > moves) {
         localStorage.setItem(record, moves);
@@ -72,6 +72,8 @@ function flipDown() {
         element.style.animation = "flipDown 600ms forwards";
     })
 };
+
+// adicionando ou removendo a tela inicial
 
 function starRemoveOurAdd() {
     if(removeOurAdd){
